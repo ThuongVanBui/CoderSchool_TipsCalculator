@@ -14,10 +14,6 @@
 		FE07F84F1ED90B9A00241BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE07F84D1ED90B9A00241BF2 /* LaunchScreen.storyboard */; };
 		FE07F85A1ED90B9B00241BF2 /* TipsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8591ED90B9B00241BF2 /* TipsCalculatorTests.swift */; };
 		FE07F8651ED90B9B00241BF2 /* TipsCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8641ED90B9B00241BF2 /* TipsCalculatorUITests.swift */; };
-		FE07F8751ED9384D00241BF2 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE07F8721ED9384D00241BF2 /* settings-icon.png */; };
-		FE07F8761ED9384D00241BF2 /* settings-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE07F8731ED9384D00241BF2 /* settings-icon1.png */; };
-		FE07F8771ED9384D00241BF2 /* Settings-L-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE07F8741ED9384D00241BF2 /* Settings-L-icon1.png */; };
-		FE494A3E1EDBC0710086BDB3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE494A3D1EDBC0710086BDB3 /* SWRevealViewController.m */; };
 		FE494A4E1EDC0A430086BDB3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE494A4D1EDC0A430086BDB3 /* MenuViewController.swift */; };
 		FE494A501EDC0A820086BDB3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -53,12 +49,6 @@
 		FE07F8601ED90B9B00241BF2 /* TipsCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE07F8641ED90B9B00241BF2 /* TipsCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculatorUITests.swift; sourceTree = "<group>"; };
 		FE07F8661ED90B9B00241BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE07F8721ED9384D00241BF2 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-icon.png"; path = "../../../Documents/settings-icon.png"; sourceTree = "<group>"; };
-		FE07F8731ED9384D00241BF2 /* settings-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-icon1.png"; path = "../../../Documents/settings-icon1.png"; sourceTree = "<group>"; };
-		FE07F8741ED9384D00241BF2 /* Settings-L-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-L-icon1.png"; path = "../../../Documents/Settings-L-icon1.png"; sourceTree = "<group>"; };
-		FE494A3B1EDBC0700086BDB3 /* TipsCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TipsCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
-		FE494A3C1EDBC0710086BDB3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Downloads/SWRevealController/SWRevealViewController.h; sourceTree = "<group>"; };
-		FE494A3D1EDBC0710086BDB3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Downloads/SWRevealController/SWRevealViewController.m; sourceTree = "<group>"; };
 		FE494A4D1EDC0A430086BDB3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,9 +109,6 @@
 				FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */,
 				FE07F84B1ED90B9A00241BF2 /* Assets.xcassets */,
 				FE07F84D1ED90B9A00241BF2 /* LaunchScreen.storyboard */,
-				FE494A3C1EDBC0710086BDB3 /* SWRevealViewController.h */,
-				FE494A3D1EDBC0710086BDB3 /* SWRevealViewController.m */,
-				FE494A3B1EDBC0700086BDB3 /* TipsCalculator-Bridging-Header.h */,
 				FE07F8501ED90B9A00241BF2 /* Info.plist */,
 			);
 			path = TipsCalculator;
@@ -148,9 +135,6 @@
 		FE07F8781ED9387600241BF2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				FE07F8731ED9384D00241BF2 /* settings-icon1.png */,
-				FE07F8721ED9384D00241BF2 /* settings-icon.png */,
-				FE07F8741ED9384D00241BF2 /* Settings-L-icon1.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -266,9 +250,6 @@
 				FE07F84F1ED90B9A00241BF2 /* LaunchScreen.storyboard in Resources */,
 				FE07F84C1ED90B9A00241BF2 /* Assets.xcassets in Resources */,
 				FE07F84A1ED90B9A00241BF2 /* Main.storyboard in Resources */,
-				FE07F8751ED9384D00241BF2 /* settings-icon.png in Resources */,
-				FE07F8771ED9384D00241BF2 /* Settings-L-icon1.png in Resources */,
-				FE07F8761ED9384D00241BF2 /* settings-icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +278,6 @@
 				FE494A4E1EDC0A430086BDB3 /* MenuViewController.swift in Sources */,
 				FE494A501EDC0A820086BDB3 /* MenuTableViewCell.swift in Sources */,
 				FE07F8451ED90B9A00241BF2 /* AppDelegate.swift in Sources */,
-				FE494A3E1EDBC0710086BDB3 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +434,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.TipsCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TipsCalculator/TipsCalculator-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -469,7 +450,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.TipsCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TipsCalculator/TipsCalculator-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

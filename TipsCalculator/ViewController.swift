@@ -31,8 +31,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       btnMenu.target = revealViewController()
-        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+//       btnMenu.target = revealViewController()
+//        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
       billText.becomeFirstResponder()
         defaults.set(billText.text, forKey: "numberOld")
         defaults.set(TipRate.value, forKey: "pct")
