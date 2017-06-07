@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 class PrintBill: UIViewController {
-    var printbillUser = UserDefaults()
-    var printPersonPay = UserDefaults()
-   
-    @IBOutlet weak var PrintPersonPayLable: UILabel!
+    var printbillUser:NSString!
+    var printPersonPay:NSString!
     @IBOutlet weak var PrintBillLabel: UILabel!
+    @IBOutlet weak var PrintPersonPayLable: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        printbillUser = UserDefaults()
-        printPersonPay = UserDefaults()
+        printbillUser = defaults.object(forKey: "numberOld") as! NSString
+        printPersonPay = defaults.object(forKey: "personpay") as! NSString
         
     }
     
-    @IBAction func PrintBill(_ sender: Any) {
-        PrintBillLabel.text = printbillUser.object(forKey: "totalbill_truyen") as! NSString as String
-        PrintPersonPayLable.text = printPersonPay.object(forKey: "personpay_truyen") as! NSString as String
+    @IBAction func PrintBill(_ sender: AnyObject) {
+        PrintBillLabel.text = printbillUser! as String
+        PrintPersonPayLable.text = printPersonPay! as String
     }
 }

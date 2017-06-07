@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+var defaults = UserDefaults.standard
+
 class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControllerDelegate{
 //label
     @IBOutlet weak var tipLabel: UILabel!
@@ -26,28 +28,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
     @IBOutlet weak var TipRate: UISlider!
     
     //Variables
-    let defaults = UserDefaults.standard
     var total = Double()
-    var printbillUser = UserDefaults()
-    var printPersonPay = UserDefaults()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.billText.delegate = self;
+        self.splitLabel.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
 //       btnMenu.target = revealViewController()
 //        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-        printbillUser = UserDefaults()
-        printPersonPay = UserDefaults()
       billText.becomeFirstResponder()
-        defaults.set(billText.text, forKey: "numberOld")
-        defaults.set(TipRate.value, forKey: "pct")
+
     }
 
-    override func prepareForInterfaceBuilder() {
-        printbillUser.set(totalLabel, forKey: "totalbill_truyen")
-        printPersonPay.set(personpayLabel, forKey: "personpay_truyen")
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,6 +57,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         view.endEditing(true)
     }
    
+    @IBAction func item(_ sender: Any) {
+        defaults.set(billText.text, forKey: "numberOld")
+        defaults.set(TipRate.value, forKey: "pct")
+        defaults.set(personpayLabel.text, forKey: "personpay")
+        let printview = self.storyboard?.instantiateViewController(withIdentifier: "PrintViewID") as! PrintBill
+        self.navigationController?.pushViewController(printview, animated: true)
+    }
     
    
     
@@ -80,13 +80,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         personpayLabel.text = String(format:"$%.2f",(personpay))
         
     }
-//    
-//    @IBAction func settings(_ sender: Any) {
-//        performSegue(withIdentifier: "settings", sender: self)
-//    }
-//    @IBAction func setting(_ sender: Any) {
-//        performSegue(withIdentifier: "setting", sender: self)
-//    }
     
     @IBAction func btnAqua() {
         self.view.backgroundColor = UIColor.init(red: 88/255, green: 160/255, blue: 248/255, alpha: 1)
