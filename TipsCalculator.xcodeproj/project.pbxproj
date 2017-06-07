@@ -14,6 +14,7 @@
 		FE07F84F1ED90B9A00241BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE07F84D1ED90B9A00241BF2 /* LaunchScreen.storyboard */; };
 		FE07F85A1ED90B9B00241BF2 /* TipsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8591ED90B9B00241BF2 /* TipsCalculatorTests.swift */; };
 		FE07F8651ED90B9B00241BF2 /* TipsCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8641ED90B9B00241BF2 /* TipsCalculatorUITests.swift */; };
+		FE41AEB31EE7B43F00C308FC /* PrintBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41AEB21EE7B43F00C308FC /* PrintBill.swift */; };
 		FE494A4E1EDC0A430086BDB3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE494A4D1EDC0A430086BDB3 /* MenuViewController.swift */; };
 		FE494A501EDC0A820086BDB3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		FE07F8601ED90B9B00241BF2 /* TipsCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE07F8641ED90B9B00241BF2 /* TipsCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculatorUITests.swift; sourceTree = "<group>"; };
 		FE07F8661ED90B9B00241BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE41AEB21EE7B43F00C308FC /* PrintBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintBill.swift; sourceTree = "<group>"; };
 		FE494A4D1EDC0A430086BDB3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				FE07F84B1ED90B9A00241BF2 /* Assets.xcassets */,
 				FE07F84D1ED90B9A00241BF2 /* LaunchScreen.storyboard */,
 				FE07F8501ED90B9A00241BF2 /* Info.plist */,
+				FE41AEB21EE7B43F00C308FC /* PrintBill.swift */,
 			);
 			path = TipsCalculator;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				FE07F8471ED90B9A00241BF2 /* ViewController.swift in Sources */,
 				FE494A4E1EDC0A430086BDB3 /* MenuViewController.swift in Sources */,
+				FE41AEB31EE7B43F00C308FC /* PrintBill.swift in Sources */,
 				FE494A501EDC0A820086BDB3 /* MenuTableViewCell.swift in Sources */,
 				FE07F8451ED90B9A00241BF2 /* AppDelegate.swift in Sources */,
 			);

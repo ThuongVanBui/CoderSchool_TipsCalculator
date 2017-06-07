@@ -5,10 +5,10 @@
 //  Created by Lon on 5/27/17.
 //  Copyright © 2017 Lon. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControllerDelegate{
 //label
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -28,27 +28,47 @@ class ViewController: UIViewController {
     //Variables
     let defaults = UserDefaults.standard
     var total = Double()
+    var printbillUser = UserDefaults()
+    var printPersonPay = UserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.billText.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
 //       btnMenu.target = revealViewController()
 //        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        printbillUser = UserDefaults()
+        printPersonPay = UserDefaults()
       billText.becomeFirstResponder()
         defaults.set(billText.text, forKey: "numberOld")
         defaults.set(TipRate.value, forKey: "pct")
     }
 
+    override func prepareForInterfaceBuilder() {
+        printbillUser.set(totalLabel, forKey: "totalbill_truyen")
+        printPersonPay.set(personpayLabel, forKey: "personpay_truyen")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text == "" && (string == "0" || string == ","){
+        return false
+        }
+        return true
+    }
+    
     @IBAction func Ontap(_ sender: AnyObject) {
         view.endEditing(true)
     }
+   
     
-    @IBAction func calcalatorTips(_ sender: AnyObject) {
+   
+    
+        @IBAction func calcalatorTips(_ sender: AnyObject) {
+            
         let tipPercenttages = [0.18, 0.2, 0.25]
         let bill = Double(billText.text!) ?? 0
         let tip = bill * tipPercenttages[percentSegment.selectedSegmentIndex]
@@ -58,6 +78,7 @@ class ViewController: UIViewController {
         let split = Double(splitLabel.text!) ?? 1
         let personpay = total / split
         personpayLabel.text = String(format:"$%.2f",(personpay))
+        
     }
 //    
 //    @IBAction func settings(_ sender: Any) {
@@ -103,5 +124,7 @@ totalLabel.text = String(format:"$%.2f",totalBill)
        
         
     }
+   
     }
+    
 

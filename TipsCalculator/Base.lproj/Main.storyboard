@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lim-Q7-1ko">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lim-Q7-1ko">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -311,14 +311,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="n7D-I3-l8A">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hXO-93-ZUw">
-                            <connections>
-                                <action selector="Menu:" destination="BYZ-38-t0r" id="s9T-MD-1B1"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hXO-93-ZUw"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="fdI-Ql-58V">
                             <connections>
-                                <action selector="setting:" destination="BYZ-38-t0r" id="ing-E3-bZY"/>
                                 <segue destination="JJX-J5-nzt" kind="show" id="WeK-XG-mKX"/>
                             </connections>
                         </barButtonItem>
@@ -326,7 +321,6 @@
                     <connections>
                         <outlet property="TipRate" destination="8kg-EA-e9w" id="UGg-yR-waB"/>
                         <outlet property="billText" destination="fXE-h7-CBQ" id="Gke-x9-Az3"/>
-                        <outlet property="btnMenu" destination="hXO-93-ZUw" id="b0e-Jx-rsW"/>
                         <outlet property="percentSegment" destination="7iC-H6-eqa" id="uiq-O1-RTy"/>
                         <outlet property="percentTip" destination="yqk-DS-zyO" id="HLH-zC-wY7"/>
                         <outlet property="personpayLabel" destination="Oxl-Y0-2m8" id="oZ0-4E-lMo"/>
@@ -347,7 +341,7 @@
         <!--Settings-->
         <scene sceneID="8sh-U7-6g8">
             <objects>
-                <viewController storyboardIdentifier="CurrentcyID" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJX-J5-nzt" customClass="Currentcy" customModule="TipsCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentcyID" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJX-J5-nzt" customClass="PrintBill" customModule="TipsCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PYT-Aq-9N5"/>
                         <viewControllerLayoutGuide type="bottom" id="3ca-i9-Qqx"/>
@@ -356,14 +350,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TK-b9-cjf">
-                                <rect key="frame" x="16" y="72" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05c-hv-gO0">
+                                <rect key="frame" x="139" y="72" width="42" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bJi-8h-4Mu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-HW-E3y">
+                                <rect key="frame" x="97" y="132" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D67-OJ-eK7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Person Must Pay Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3i-1v-NwS">
+                                <rect key="frame" x="46" y="192" width="228" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eSw-et-4i1"/>
+                                    <constraint firstAttribute="width" constant="228" id="jyB-em-iQB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-aH-5kb">
+                                <rect key="frame" x="97" y="252" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="bEw-Ft-hy8"/>
+                                    <constraint firstAttribute="height" constant="30" id="i8j-Nq-4jV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks Customer Use Application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ni3-bG-rqN">
+                                <rect key="frame" x="21" y="508" width="278" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="sIN-P8-EKa"/>
+                                    <constraint firstAttribute="height" constant="30" id="txy-XM-9y7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ct-IGD">
+                                <rect key="frame" x="127" y="312" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="EU7-EJ-Wvu"/>
+                                    <constraint firstAttribute="height" constant="30" id="aX6-h5-MgO"/>
+                                </constraints>
+                                <state key="normal" title="Print Bill"/>
+                                <connections>
+                                    <action selector="PrintBill:" destination="JJX-J5-nzt" eventType="touchUpInside" id="OCs-1T-Lyz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="05c-hv-gO0" firstAttribute="top" secondItem="PYT-Aq-9N5" secondAttribute="bottom" constant="8" id="1w5-WY-bBx"/>
+                            <constraint firstItem="AGz-aH-5kb" firstAttribute="top" secondItem="u3i-1v-NwS" secondAttribute="bottom" constant="30" id="DXm-m7-ujv"/>
+                            <constraint firstItem="ARQ-HW-E3y" firstAttribute="top" secondItem="05c-hv-gO0" secondAttribute="bottom" constant="30" id="H1i-Ch-FdV"/>
+                            <constraint firstItem="Ni3-bG-rqN" firstAttribute="leading" secondItem="nT7-tW-bRC" secondAttribute="leadingMargin" constant="5" id="I70-Bs-kB8"/>
+                            <constraint firstItem="u3i-1v-NwS" firstAttribute="top" secondItem="ARQ-HW-E3y" secondAttribute="bottom" constant="30" id="LX3-Jz-DDe"/>
+                            <constraint firstItem="kaP-ct-IGD" firstAttribute="top" secondItem="AGz-aH-5kb" secondAttribute="bottom" constant="30" id="MS1-eH-U1B"/>
+                            <constraint firstItem="05c-hv-gO0" firstAttribute="leading" secondItem="nT7-tW-bRC" secondAttribute="leadingMargin" constant="123" id="NZQ-AB-ZGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u3i-1v-NwS" secondAttribute="trailing" constant="30" id="ZPR-HR-MOp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="05c-hv-gO0" secondAttribute="trailing" constant="123" id="ZQE-VY-LUp"/>
+                            <constraint firstItem="AGz-aH-5kb" firstAttribute="leading" secondItem="nT7-tW-bRC" secondAttribute="leadingMargin" constant="81" id="aNc-6L-Gln"/>
+                            <constraint firstItem="kaP-ct-IGD" firstAttribute="leading" secondItem="nT7-tW-bRC" secondAttribute="leadingMargin" constant="111" id="aXw-KZ-1V1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ni3-bG-rqN" secondAttribute="trailing" constant="5" id="dDM-zj-Kio"/>
+                            <constraint firstItem="ARQ-HW-E3y" firstAttribute="leading" secondItem="AGz-aH-5kb" secondAttribute="leading" id="db7-IL-gab"/>
+                            <constraint firstItem="ARQ-HW-E3y" firstAttribute="trailing" secondItem="AGz-aH-5kb" secondAttribute="trailing" id="eXx-nt-2xF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kaP-ct-IGD" secondAttribute="trailing" constant="111" id="hTl-0I-5C0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AGz-aH-5kb" secondAttribute="trailing" constant="81" id="q6H-vX-3HT"/>
+                            <constraint firstItem="u3i-1v-NwS" firstAttribute="leading" secondItem="nT7-tW-bRC" secondAttribute="leadingMargin" constant="30" id="rdi-fe-x72"/>
+                            <constraint firstItem="3ca-i9-Qqx" firstAttribute="top" secondItem="Ni3-bG-rqN" secondAttribute="bottom" constant="30" id="wfG-zd-aCk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PrintBillLabel" destination="ARQ-HW-E3y" id="tLe-S1-cTF"/>
+                        <outlet property="PrintPersonPayLable" destination="AGz-aH-5kb" id="uMz-0U-9fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYr-3v-TVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,7 +483,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8qy-Wj-x0e" id="k8E-OX-dBr">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Cc-jb-jGe">
