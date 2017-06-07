@@ -13,7 +13,7 @@ class PrintBill: UIViewController {
     var printPersonPay:NSString!
     @IBOutlet weak var PrintBillLabel: UILabel!
     @IBOutlet weak var PrintPersonPayLable: UILabel!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         printbillUser = defaults.object(forKey: "numberOld") as! NSString
