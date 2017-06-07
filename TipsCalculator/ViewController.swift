@@ -38,9 +38,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
 //       btnMenu.target = revealViewController()
 //        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
       billText.becomeFirstResponder()
+        self.SaveData()
+    }
+    func SaveData()  {
+        defaults.set(billText.text, forKey: "numberOld")
+        defaults.set(TipRate.value, forKey: "pct")
+        defaults.set(personpayLabel.text, forKey: "personpay")
 
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,10 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
     }
    
     @IBAction func item(_ sender: Any) {
-        defaults.set(billText.text, forKey: "numberOld")
-        defaults.set(TipRate.value, forKey: "pct")
-        defaults.set(personpayLabel.text, forKey: "personpay")
-        let printview = self.storyboard?.instantiateViewController(withIdentifier: "PrintViewID") as! PrintBill
+        self.SaveData()
+               let printview = self.storyboard?.instantiateViewController(withIdentifier: "PrintViewID") as! PrintBill
         self.navigationController?.pushViewController(printview, animated: true)
     }
     
