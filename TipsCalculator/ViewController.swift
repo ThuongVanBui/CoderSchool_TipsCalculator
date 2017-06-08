@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         let bill = Double(billText.text!) ?? 0
         let tip = bill * tipPercenttages[percentSegment.selectedSegmentIndex]
         TipRate.value = Float(100 * tipPercenttages[percentSegment.selectedSegmentIndex])
-        defaults.set(TipRate.value, forKey: "TipRate")
+        
         percentTip.text = "\(Int(100 * tipPercenttages[percentSegment.selectedSegmentIndex]))%"
         total = bill + tip
         tipLabel.text = String(format:"$%.2f",(tip))
@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         let split = Double(splitLabel.text!) ?? 1
         let personpay = total / split
         personpayLabel.text = String(format:"$%.2f",(personpay))
-        defaults.synchronize()
+        
     }
     
     @IBAction func btnAqua() {
