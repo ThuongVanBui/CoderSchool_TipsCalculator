@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lim-Q7-1ko">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l6D-i1-TXP">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Setting-->
+        <scene sceneID="Gog-x8-p0f">
+            <objects>
+                <viewController id="vQe-Ak-PSG" customClass="SettingViewController" customModule="TipsCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tlz-6f-Esd"/>
+                        <viewControllerLayoutGuide type="bottom" id="aqW-5z-l9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UBi-vb-208">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Percentage Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAm-ko-999">
+                                <rect key="frame" x="26" y="104" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YpC-2V-pgR">
+                                <rect key="frame" x="34" y="135" width="208" height="31"/>
+                                <connections>
+                                    <action selector="onPercent:" destination="vQe-Ak-PSG" eventType="valueChanged" id="bk2-rI-0Oz"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Km-SfP">
+                                <rect key="frame" x="260" y="140" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bbf-Bh-UCd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fUD-Km-SfP" firstAttribute="top" secondItem="XAm-ko-999" secondAttribute="bottom" constant="15" id="6x6-1K-MxM"/>
+                            <constraint firstItem="XAm-ko-999" firstAttribute="leading" secondItem="UBi-vb-208" secondAttribute="leadingMargin" constant="10" id="SkF-be-wfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="fUD-Km-SfP" secondAttribute="trailing" constant="10" id="WrP-je-QiO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XAm-ko-999" secondAttribute="trailing" constant="10" id="aw2-bu-beN"/>
+                            <constraint firstItem="YpC-2V-pgR" firstAttribute="top" secondItem="XAm-ko-999" secondAttribute="bottom" constant="10" id="cdn-wV-3lz"/>
+                            <constraint firstItem="XAm-ko-999" firstAttribute="top" secondItem="Tlz-6f-Esd" secondAttribute="bottom" constant="40" id="ijU-vI-5jC"/>
+                            <constraint firstItem="fUD-Km-SfP" firstAttribute="leading" secondItem="YpC-2V-pgR" secondAttribute="trailing" constant="20" id="lp1-qB-AgC"/>
+                            <constraint firstItem="YpC-2V-pgR" firstAttribute="leading" secondItem="UBi-vb-208" secondAttribute="leadingMargin" constant="20" id="vRF-wb-MzL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="upn-i9-nzR">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Zzi-Pg-fwY">
+                            <connections>
+                                <action selector="Onsave:" destination="vQe-Ak-PSG" id="zx2-Wl-p9K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="percentLabel" destination="fUD-Km-SfP" id="txN-dm-I7a"/>
+                        <outlet property="percentSlider" destination="YpC-2V-pgR" id="MOn-JF-tZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pf-sL-8pw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2865" y="287.32394366197184"/>
+        </scene>
         <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -311,7 +373,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="n7D-I3-l8A">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hXO-93-ZUw"/>
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hXO-93-ZUw">
+                            <connections>
+                                <segue destination="vQe-Ak-PSG" kind="show" id="95u-2o-lTn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Nzd-ge-vSC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8HV-VN-4oc">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -341,7 +407,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="967.5" y="1094.3661971830986"/>
+            <point key="canvasLocation" x="2962.5" y="1094.3661971830986"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8sh-U7-6g8">
@@ -445,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYr-3v-TVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687.5" y="1094.3661971830986"/>
+            <point key="canvasLocation" x="3682.5" y="1094.3661971830986"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="GDt-Du-7vL">
@@ -461,7 +527,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Lim-Q7-1ko" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="b8o-rb-zWx"/>
                         <segue destination="t96-vN-Ap2" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="hRr-OA-0mh"/>
                     </connections>
                 </viewController>
@@ -541,22 +606,22 @@
             <point key="canvasLocation" x="142.5" y="411.97183098591552"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uAP-rG-pMl">
+        <scene sceneID="cbC-CG-M8y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lim-Q7-1ko" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l6D-i1-TXP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVw-oj-6CG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S9Y-ZX-ae8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wc1-gI-yAs"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gyg-Hx-JtX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="skz-Uo-gQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGY-bi-Ilz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="1096"/>
+            <point key="canvasLocation" x="1965" y="1094.3661971830986"/>
         </scene>
     </scenes>
     <resources>

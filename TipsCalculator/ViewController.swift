@@ -38,6 +38,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         //       btnMenu.target = revealViewController()
         //        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         billText.becomeFirstResponder()
+                self.SaveData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         if let tipRatePercent = defaults.object(forKey: "TipRate") as? Float {
             TipRate.value = tipRatePercent
             percentTip.text = "\(Int(tipRatePercent))%"
@@ -48,7 +51,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
                 percentSegment.selectedSegmentIndex = 0
             }
         }
-        self.SaveData()
+
     }
     func SaveData()  {
         defaults.set(billText.text, forKey: "numberOld")
@@ -129,9 +132,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPageViewControlle
         tipLabel.text = String(format:"$%.2f",tipBill)
         totalLabel.text = String(format:"$%.2f",totalBill)
         personpayLabel.text = String(format:"$%.2f",psPay)
-        defaults.set(sender.value, forKey: "TipRate")
         
-        defaults.synchronize()
         
         
     }

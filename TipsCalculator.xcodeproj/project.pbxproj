@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41061EB01EE938190079E1A3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41061EAF1EE938190079E1A3 /* SettingViewController.swift */; };
 		FE07F8451ED90B9A00241BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8441ED90B9A00241BF2 /* AppDelegate.swift */; };
 		FE07F8471ED90B9A00241BF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F8461ED90B9A00241BF2 /* ViewController.swift */; };
 		FE07F84A1ED90B9A00241BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE07F8481ED90B9A00241BF2 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41061EAF1EE938190079E1A3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		FE07F8411ED90B9A00241BF2 /* TipsCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE07F8441ED90B9A00241BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE07F8461ED90B9A00241BF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				FE07F8781ED9387600241BF2 /* Image */,
 				FE07F8441ED90B9A00241BF2 /* AppDelegate.swift */,
 				FE07F8461ED90B9A00241BF2 /* ViewController.swift */,
+				41061EAF1EE938190079E1A3 /* SettingViewController.swift */,
 				FE07F8481ED90B9A00241BF2 /* Main.storyboard */,
 				FE494A4D1EDC0A430086BDB3 /* MenuViewController.swift */,
 				FE494A4F1EDC0A820086BDB3 /* MenuTableViewCell.swift */,
@@ -282,6 +285,7 @@
 				FE41AEB31EE7B43F00C308FC /* PrintBill.swift in Sources */,
 				FE494A501EDC0A820086BDB3 /* MenuTableViewCell.swift in Sources */,
 				FE07F8451ED90B9A00241BF2 /* AppDelegate.swift in Sources */,
+				41061EB01EE938190079E1A3 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
